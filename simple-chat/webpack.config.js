@@ -16,7 +16,7 @@ module.exports = {
     },
     output: {
         path: BUILD_PATH,
-        filename: 'bundle.js'
+        filename: 'index.js'
     },
     entry: {
         index: './index.css',
