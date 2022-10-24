@@ -18,6 +18,9 @@ module.exports = {
         path: BUILD_PATH,
         filename: 'bundle.js'
     },
+    entry: {
+        index: './index.css',
+    },
     module: {
         strictExportPresence: true,
         rules: [
