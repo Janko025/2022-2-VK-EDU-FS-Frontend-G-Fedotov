@@ -1,3 +1,5 @@
+import './index.css';
+
 const form = document.querySelector("form");
 const input = document.querySelector(".form-input");
 const messages = document.querySelector(".messages");
