@@ -86,14 +86,26 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./index.css":
+/*!*******************!*\
+  !*** ./index.css ***!
+  \*******************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./index.css?");
+
+/***/ }),
+
 /***/ "./index.js":
 /*!******************!*\
   !*** ./index.js ***!
   \******************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("var form = document.querySelector(\"form\");\nvar input = document.querySelector(\".form-input\");\nvar messages = document.querySelector(\".messages\");\nform.addEventListener(\"submit\", handleKeyPress);\nform.addEventListener(\"keypress\", handleKeyPress);\nfunction handleKeyPress(event) {\n  if (event.keyCode === 13) {\n    event.preventDefault();\n    var date = new Date();\n    var setValue = {\n      \"message\": input.value,\n      \"date\": \"\".concat(date.getHours(), \":\").concat(date.getMinutes()),\n      \"stat\": null\n    };\n    localStorage.setItem(\"\".concat(generetorKeys()), JSON.stringify(setValue));\n    createBlock(setValue);\n    input.value = \"\";\n  }\n}\nfunction createBlock(setValue) {\n  var block = document.createElement(\"div\");\n  block.className = \"message right\";\n  block.innerHTML = \"\\n  <div class=\\\"message-text\\\">\".concat(setValue.message, \"</div>\\n  <div class=\\\"message-meta\\\">\\n      <div class=\\\"message-date\\\">\").concat(setValue.date, \"</div>\\n      <div class=\\\"message-status\\\">\\n          <span class=\\\"material-icons\\\"></span>\\n          </div>\\n  </div>\\n    \");\n  messages.append(block);\n}\nfunction startRender() {\n  var chat = Object.keys(localStorage).sort();\n  chat.forEach(function (item) {\n    var value = localStorage.getItem(item);\n    createBlock(JSON.parse(value));\n  });\n}\nfunction generetorKeys() {\n  var numberKeys = Object.keys(localStorage).sort();\n  var numberKey;\n  if (numberKeys.length == 0) {\n    numberKey = 1;\n    return numberKey;\n  } else {\n    numberKey = 1 + parseInt(numberKeys[numberKeys.length - 1]);\n    return numberKey;\n  }\n}\nstartRender();\n\n//# sourceURL=webpack:///./index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_0__);\n\nvar form = document.querySelector(\"form\");\nvar input = document.querySelector(\".form-input\");\nvar messages = document.querySelector(\".messages\");\nform.addEventListener(\"submit\", handleKeyPress);\nform.addEventListener(\"keypress\", handleKeyPress);\nfunction handleKeyPress(event) {\n  if (event.keyCode === 13) {\n    event.preventDefault();\n    var date = new Date();\n    var setValue = {\n      \"message\": input.value,\n      \"date\": \"\".concat(date.getHours(), \":\").concat(date.getMinutes()),\n      \"stat\": null\n    };\n    localStorage.setItem(\"\".concat(generetorKeys()), JSON.stringify(setValue));\n    createBlock(setValue);\n    input.value = \"\";\n  }\n}\nfunction createBlock(setValue) {\n  var block = document.createElement(\"div\");\n  block.className = \"message right\";\n  block.innerHTML = \"\\n  <div class=\\\"message-text\\\">\".concat(setValue.message, \"</div>\\n  <div class=\\\"message-meta\\\">\\n      <div class=\\\"message-date\\\">\").concat(setValue.date, \"</div>\\n      <div class=\\\"message-status\\\">\\n          <span class=\\\"material-icons\\\"></span>\\n          </div>\\n  </div>\\n    \");\n  messages.append(block);\n}\nfunction startRender() {\n  var chat = Object.keys(localStorage).sort();\n  chat.forEach(function (item) {\n    var value = localStorage.getItem(item);\n    createBlock(JSON.parse(value));\n  });\n}\nfunction generetorKeys() {\n  var numberKeys = Object.keys(localStorage).sort();\n  var numberKey;\n  if (numberKeys.length == 0) {\n    numberKey = 1;\n    return numberKey;\n  } else {\n    numberKey = 1 + parseInt(numberKeys[numberKeys.length - 1]);\n    return numberKey;\n  }\n}\nstartRender();\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 
