@@ -16,10 +16,7 @@ module.exports = {
     },
     output: {
         path: BUILD_PATH,
-        filename: 'index.js'
-    },
-    entry: {
-        index: './index.css',
+        filename: 'bundle.js'
     },
     module: {
         strictExportPresence: true,
